@@ -43,3 +43,71 @@ console.log("" === false); // false vs. false (real)
 console.log(null === undefined); // false vs. false (real)
 console.log("5" === 5); // false vs. false (real)
 
+/*
+*	TEMA 2 ------------------------------------------------------------------------------------------
+*/
+console.log("TEMA 2 ----------------------------------------------------------------------------------");
+
+// Kata 1 - ¿Par o impar?
+const numero2 = 7;
+if(numero2 % 2 === 0)
+	console.log("par");
+else
+	console.log("impar");
+
+const resultado2 = (numero2 % 2 == 0) ? "par" : "impar";
+console.log(resultado2);
+
+// Kata 2 - FizzBuzz del 1 al 20
+
+for(let i=1; i<=20; i++) {
+	if(i % 3 == 0 && i % 5 == 0)
+		console.log("FizzBuzz");
+	else if(i%3 == 0)
+		console.log("Fizz");
+	else if(i%5 == 0)
+		console.log("Buzz");
+	else
+		console.log(i);
+}
+
+// Kata 3 - Menú de entradas con `switch`
+const tipoEntrada = "prensa";
+
+switch(tipoEntrada) {
+	case "general":
+		console.log("Acceso a la pista");
+		break;
+	case "vip":
+		console.log("Acceso a la zona VIP con barra libre");
+		break;
+	case "prensa":
+	case "backstage":
+		console.log("Acceso a zona restringida");
+		break;
+	default:
+		console.log("Tipo de entrada no reconocido");
+}
+
+// Kata 4 - Cuenta atrás del aforo con `while`
+
+let plazasLibres = 5;
+while(plazasLibres>0) {
+	console.log(`Quedan ${plazasLibres} plazas libres`);
+	plazasLibres --;
+}
+console.log("Sala completa");
+
+// Kata 5 - Recorrer la cola con  `for..of`
+
+const cola = ["Ana", "menor", "Luis", "Marta"];
+
+for(const persona of cola) {
+	if(persona == 'menor')
+		continue;
+	console.log("Pasa: " + persona);
+	if(persona == "Luis") {
+		console.log("Aforo completo, cerramos");
+		break;
+	}
+}
